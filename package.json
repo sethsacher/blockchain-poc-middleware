@@ -38,7 +38,9 @@
     "express": "^4.13.3",
     "morgan": "^1.8.0",
     "resource-router-middleware": "^0.6.0",
-    "web3": "^0.14.0"
+    "web3": "^0.14.0",
+    "file-system": "^2.2.2",
+    "solc": "^0.4.19"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
