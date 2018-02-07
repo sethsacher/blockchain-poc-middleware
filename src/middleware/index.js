@@ -29,16 +29,11 @@ export default ({ config, db }) => {
 
        var SimpleStorage = SimpleStorageContract.at('0x8cdaf0cd259887258bc13a92c0a6da92698644c0');
 
-			 //var value = SimpleStorage.get();
+			 // Not sure why this returns TX hash instead of the actual value
+			 var result = SimpleStorage.get.sendTransaction();
 
-			 SimpleStorage.get(function(error, result) {
-					if (!error) {
-							console.log('Result: ' + result);
-							res.json({ message: 'Result (not sure why this is the TX and not value; it also crashes the server...): ' + result });
-					} else
-							 console.log('Error: ' + error);
-							 res.json({ message: 'Error: ' + error });
-			});
+			 res.json({ message: 'Result: ' + result });
+
 
 		})
 
